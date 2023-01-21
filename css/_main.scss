@@ -1,9 +1,11 @@
+
+
 .boxes {
+    font-family:$SpaceFont  'Trispace', sans-serif; ;
     width: 100%;
     display: flex;
-    background-color: #070e26;
     color: white;
-    background-image: url(../photo/photo_5359800293132452049_w.jpg);
+    background: url(../photo/504b872d-05e0-44cc-b090-11ca79c04926.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,7 +38,7 @@
             }
 
             p {
-                padding: 50px 0;
+                padding: 40px 0;
                 font-size: 20px;
                 line-height: 25px;
             }
@@ -47,10 +49,10 @@
                 font-size: 14px;
                 text-align: center;
                 border: 0px solid transparent;
-                background-color: black;
+                background-color:black ;
                 color: #ffffff;
                 vertical-align: middle;
-                margin-top: 20px;
+                margin-top: 2px;
                 padding: 12px 30px;
                 display: inline-block;
                 position: relative;
@@ -73,7 +75,7 @@
                     left: 0;
                     height: 15%;
                     width: 100%;
-                    background-color: red;
+                    background-color:#591616 ;
                     transform: translateY(0);
                     transition: 0.2s ease-in-out 0.3s;
                 }
@@ -88,7 +90,7 @@
                     left: 0%;
                     width: 100%;
                     height: 100%;
-                    background-color: red;
+                    background-color:#591616;
                     transition: 0.3s ease-out;
                 }
 
@@ -157,18 +159,14 @@
                     color: red;
                 }
             }
-
         }
-
-
     }
 }
-
 
 // -------------------------------------------boxes end--------------
 
 #section2 {
-    background-image: url(../photo/download.png);
+    background:url(../photo/th.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -176,6 +174,80 @@
     .title {
         width: 100%;
         border-bottom: 3px solid gray;
+        .overview-image {
+            position: relative;
+            width: 70%;
+            overflow: hidden;
+    
+            img {
+                width: 90%;
+                height: auto;
+                display: inline-block;
+                vertical-align: middle;
+                --animate-duration: 1s;
+                --animate-delay: 1s;
+                --animate-repeat: 1;
+    
+            }
+    
+            @keyframes ripple {
+                from {
+                    top: 0px;
+                    left: 0px;
+                    bottom: 0;
+                    right: 0;
+                }
+    
+                to {
+                    right: -40px;
+                    top: -40px;
+                    left: -40px;
+                    bottom: -40px;
+                }
+    
+            }
+    
+            a {
+                display: inline-block;
+                width: 75px;
+                height: 75px;
+                line-height: 75px;
+                background-color: #591616;
+                border-radius: 50%;
+                color: #ffffff;
+                position: absolute;
+                text-align: center;
+                margin: auto;
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                text-decoration: none;
+                transition: 0.5s;
+    
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: 50%;
+                    border: 3px solid #ffffff;
+                    animation: ripple 1s linear infinite;
+                }
+    
+                i {
+                    line-height: normal;
+                    color: #ffffff;
+                    text-align: center;
+                    font-size: 30px;
+                }
+            }
+        }
 
         &:nth-child(3) {
             border-bottom: none;
@@ -189,7 +261,16 @@
                 height: 100%;
             }
         }
+        @keyframes lefttoright {
+            from {
+                left: 0;
+            }
 
+            to {
+                left: 100%;
+            }
+
+        }
         .text {
             width: 70%;
             text-align: center;
@@ -197,6 +278,32 @@
             h1 {
                 font-size: 70px;
                 margin: 30px;
+            }
+            .bar {
+                height: 5px;
+                width: 100px;
+                background: #da3f07;
+                position: relative;
+                border-radius: 5px;
+                overflow: hidden;
+                margin-left: 47%;
+                margin-bottom: 20px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 7px;
+                    background-color: #f3eaea;
+                    animation-duration: 2s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-name: lefttoright;
+
+
+
+                }
             }
 
             p {
@@ -210,48 +317,65 @@
 
 #transport {
     text-align: center;
+    background-image: url(https://wallpaperaccess.com/full/1314202.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: large;
+    }
 
     .ways {
-        border: 2px solid blueviolet;
         width: 100%;
-
         .way1 {
-            width: 40%;
+            margin: 10px;
+            width: 50%;
+            overflow: hidden;
+            position: relative;
 
-            .imgElevator {
-                width: 100%;
-                height: 70%;
-                overflow: hidden;
-                position: relative;
-                filter: grayscale(100%);
-
-                &:hover {
+            &:hover {
+                 .imgElevator {
+                    transform: scale(1.2);
                     filter: grayscale(0%);
-                    .overlay{
-                        opacity: 1;
-                    }
-                    img{
-                        transform: scale(1.2);
-                    }
-
                 }
 
-                .overlay{
-                    display: flex;
-                    text-align: center;
-                    flex-direction: column;
-                    align-items: center;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    background: rgba(0, 0, 0, 0.498);
-                    transition: 0.1s ease-in-out;
+                .overlay {
+                    opacity: 1;
                 }
             }
 
+            .overlay {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height:100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                background: rgba(0, 0, 0, 0.498);
+                transition: 0.1s ease-in-out;
+
+                h3 {
+                    margin: 50%;
+                    font-size: 50px;
+                    color: white;
+                }
+            }
+
+            .imgElevator {
+                width: 100%;
+                height: auto;
+                filter: grayscale(100%);
+                transition: 0.5s ease-in-out;
+            }
         }
 
         .way2 {
