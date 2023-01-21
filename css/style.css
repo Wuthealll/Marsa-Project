@@ -1,10 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Hind:wght@300;400;500;600;700&family=Trispace:wght@300;400;500;600;700;800&display=swap");
+.custom-width {
+  width: 86%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
 #header {
   width: 100%;
-  padding: 30px 85px;
+  padding: 30px 0;
   background-color: rgb(255, 0, 0);
 }
 #header .logo a {
-  text-decoration: none;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -18,7 +27,6 @@
   margin-right: 25px;
 }
 #header .nav-menu ul li a {
-  text-decoration: none;
   padding-right: 18px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
