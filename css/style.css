@@ -174,24 +174,129 @@ a {
   color: red;
 }
 
+.switch-box {
+  position: fixed;
+  z-index: 10;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.switch-box .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch-box .switch #slider {
+  width: 0;
+  height: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.switch-box .switch span {
+  border: 1px solid #0eafaf;
+  background-color: #0dbcc0;
+  border-radius: 50px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+.switch-box .switch span #toggledark {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 2.5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: #dafafc;
+  padding: 2px;
+  border-radius: 50%;
+  color: rgb(150, 189, 22);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.switch-box .switch span #togglemoon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: #dafafc;
+  padding: 2px;
+  border-radius: 50%;
+  color: rgb(195, 255, 0);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: none;
+}
+
+.go-top {
+  opacity: 1;
+  visibility: visible;
+  bottom: 20px;
+  position: fixed;
+  cursor: pointer;
+  right: 20px;
+  color: #ffffff;
+  background-color: #202647;
+  z-index: 4;
+  width: 45px;
+  text-align: center;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.9s;
+  overflow: hidden;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.go-top i {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 30px;
+  margin: auto;
+  line-height: 1;
+  display: inline-block;
+}
+
 #section2 {
-  background: url(../photo/th.jfif);
+  background: url(../photo/uzay3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 #section2 .title {
   width: 100%;
-  border-bottom: 3px solid gray;
 }
 #section2 .title .overview-image {
+  margin-top: 20px;
   position: relative;
   width: 70%;
   overflow: hidden;
+  background: url(../photo/photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #section2 .title .overview-image img {
   width: 90%;
-  height: auto;
+  height: 100%;
   display: inline-block;
   vertical-align: middle;
   --animate-duration: 1s;
@@ -298,6 +403,7 @@ a {
 #section2 .title .text h1 {
   font-size: 70px;
   margin: 30px;
+  color: white;
 }
 #section2 .title .text .bar {
   height: 5px;
@@ -327,6 +433,7 @@ a {
 }
 #section2 .title .text p {
   font-size: 30px;
+  color: #ffffff;
 }
 
 #transport {
@@ -339,9 +446,11 @@ a {
 }
 #transport h1 {
   font-size: 50px;
+  padding: 30px;
 }
 #transport p {
   font-size: large;
+  padding: 30px;
 }
 #transport .ways {
   width: 100%;
@@ -351,6 +460,7 @@ a {
   width: 50%;
   overflow: hidden;
   position: relative;
+  border-radius: 30px;
 }
 #transport .ways .way1:hover .imgElevator {
   transform: scale(1.2);
